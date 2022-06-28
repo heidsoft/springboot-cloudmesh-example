@@ -26,6 +26,13 @@ public class RedisController {
         return  opsId;
     }
 
+    @GetMapping("/opsgetset")
+    public Object redisOpsGet(){
+        Long opsId =  this.redisTemplate.opsForSet().add("set_sample","java","c++","rust");
+        System.out.println(opsId);
+        return  opsId;
+    }
+
 
     /**
      * 测试类
