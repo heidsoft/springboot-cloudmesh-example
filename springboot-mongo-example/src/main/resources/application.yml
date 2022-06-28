@@ -1,0 +1,10 @@
+server:
+  port: 29090
+spring:
+  data:
+    mongodb:
+      host: 192.168.21.130
+      port: 27017
+      database: "test"
+      username: "test"
+      password: "123456"

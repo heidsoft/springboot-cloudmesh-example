@@ -1,5 +1,8 @@
 package top.cloudmesh.controller;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.configurationprocessor.json.JSONException;
 import org.springframework.boot.configurationprocessor.json.JSONObject;
@@ -84,5 +87,18 @@ public class RedisController {
         entity.put("test",1);
         entities.add(entity);
         return new ResponseEntity<Object>(entities, HttpStatus.OK);
+    }
+
+    /**
+     * https://stackoverflow.com/questions/44839753/returning-json-object-as-response-in-spring-boot
+     * @return
+     * @throws JsonProcessingException
+     */
+    @GetMapping
+    @RequestMapping(value = "/jsondemo")
+    public ResponseEntity<JsonNode> get() throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        JsonNode json = mapper.readTree("{\"id\": \"132\", \"name\": \"Alice\"}");
+        return ResponseEntity.ok(json);
     }
 }
