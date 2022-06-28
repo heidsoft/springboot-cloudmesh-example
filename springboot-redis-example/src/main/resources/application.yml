@@ -5,7 +5,7 @@ spring:
     # Redis默认情况下有16个分片，这里配置具体使用的分片。默认是索引为0的分片。redis集群只有db0
     database: 0
     # Redis服务器地址
-    host: 192.168.21.130
+    host: x.x.x.x
     # Redis服务器连接端口
     port: 6379
     # Redis服务器连接密码（默认为空）
