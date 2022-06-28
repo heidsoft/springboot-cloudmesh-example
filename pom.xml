@@ -6,6 +6,7 @@
     <modules>
         <module>springboot-zookeeper-lock-example</module>
         <module>springboot-sentinel-dashboard</module>
+        <module>springboot-redis-example</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
