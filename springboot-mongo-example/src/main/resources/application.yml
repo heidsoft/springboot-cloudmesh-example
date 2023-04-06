@@ -5,6 +5,6 @@ spring:
     mongodb:
       host: x.x.x.x
       port: 27017
-      database: "xxx"
-      username: "xxx"
-      password: "xxx"
+      database: "test"
+      username: "test"
+      password: "123456"

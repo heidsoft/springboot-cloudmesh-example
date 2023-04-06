@@ -8,6 +8,7 @@
         <module>springboot-sentinel-dashboard</module>
         <module>springboot-redis-example</module>
         <module>springboot-mongo-example</module>
+        <module>springboot-neo4j-example</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
